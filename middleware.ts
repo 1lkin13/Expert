@@ -4,5 +4,5 @@ export default clerkMiddleware();
 const publicRoutes = ["/api/webhook/clerk"];
 const ignoredRoutes = ["/api/webhook/clerk"];
 export const config = {
-  matcher: ['/((?!.*\\..*|_next).*)', '/', '/(api|trpc)(.*)'],
+  matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
 };

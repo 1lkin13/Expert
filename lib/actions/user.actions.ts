@@ -8,6 +8,7 @@ import Thread from "../models/thread.model";
 import User from "../models/user.model";
 
 import { connectToDB } from "../mongoose";
+import { IUser } from "@/interfaces/user.interface";
 
 export async function fetchUser(userId: string) {
   try {
@@ -51,7 +52,7 @@ export async function updateUser({
         image,
         onboarded: true,
       },
-      { upsert: true }
+      { upsert: true },
     );
 
     if (path === "/profile/edit") {
@@ -117,7 +118,7 @@ export async function fetchUsers({
     const regex = new RegExp(searchString, "i");
 
     // Create an initial query object to filter users.
-    const query: FilterQuery<typeof User> = {
+    const query: FilterQuery<IUser> = {
       id: { $ne: userId }, // Exclude the current user from the results.
     };
 
