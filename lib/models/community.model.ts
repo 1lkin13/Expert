@@ -1,6 +1,8 @@
+// models/community.model.ts
 import mongoose from "mongoose";
+import { ICommunity } from "@/interfaces/community.interface";
 
-const communitySchema = new mongoose.Schema({
+const communitySchema = new mongoose.Schema<ICommunity>({
   id: {
     type: String,
     required: true,
@@ -35,6 +37,6 @@ const communitySchema = new mongoose.Schema({
 });
 
 const Community =
-  mongoose.models.Community || mongoose.model("Community", communitySchema);
+  mongoose.models.Community || mongoose.model<ICommunity>("Community", communitySchema);
 
 export default Community;
