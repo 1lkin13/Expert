@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Expert
 
-## Getting Started
+Expert is a platform where users can share their thoughts, post replies, search for content, manage their profile, and favorite posts. This project is built with modern technologies and provides a seamless user experience. Below, you will find a detailed description of the project, its features, and the tech stack used.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tech Stack
 
-## Learn More
+### Frontend:
+- **Next.js:** Framework for server-rendered React applications.
+- **React:** Library for building user interfaces.
+- **Tailwind CSS:** Utility-first CSS framework for styling.
+- **Radix UI:** Accessible components for building modern web apps.
+- **Lucide Icons:** For beautiful, customizable icons.
 
-To learn more about Next.js, take a look at the following resources:
+### Backend:
+- **MongoDB & Mongoose:** Database and object data modeling.
+- **Svix:** Webhook infrastructure.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Form Management:
+- **React Hook Form:** For managing form state and validation.
+- **Zod:** Schema validation with TypeScript support.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### File Management:
+- **UploadThing:** Simple file upload solutions.
 
-## Deploy on Vercel
+### Utilities:
+- **clsx & class-variance-authority:** For conditional class management.
+- **Tailwind Merge:** Merging Tailwind CSS classes effectively.
+- **Tailwind CSS Animate:** Animation utilities for Tailwind CSS.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Installation
+
+Follow these steps to get the project up and running locally:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/1lkin13/Expert.git
+   ```
+
+2. **Navigate to the Project Directory:**
+   ```bash
+   cd expert
+   ```
+
+3. **Install Dependencies:**
+   ```bash
+   npm install
+   ```
+
+4. **Set Up Environment Variables:**
+   Create a `.env.local` file in the root of your project and add the following:
+   ```env
+   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your-key
+   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/onboarding
+   NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
+   NEXT_CLERK_WEBHOOK_SECRET= your-key
+   UPLOADTHING_SECRET= your-key
+   MONGODB_URL= your-key
+   ```
+
+5. **Run the Development Server:**
+   ```bash
+   npm run dev
+   ```
+
+6. **Access the Application:**
+   Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+---
+
+## Usage
+
+- **User Authentication:** Sign up or log in using Clerk.
+- **Create Posts and Replies:** Share your thoughts and engage in discussions.
+- **Search:** Use the search bar to find relevant content.
+- **Profile Management:** Update your profile and view your favorite posts.
+
+---
+
+## Screenshots
+
+
+<table>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/b32484ff-f84c-4c24-acca-1a398249ee60" alt="Screenshot 2025-01-26 192352" width="350" /></td>
+    <td><img src="https://github.com/user-attachments/assets/e2439572-29e3-4281-a601-2ba097cc7fce" alt="Screenshot 2025-01-26 193126" width="600" /></td>
+    <td><img src="https://github.com/user-attachments/assets/f58ca995-8147-4c3f-a9ff-a56bfed977d0" alt="Screenshot 2025-01-26 193115" width="600" /></td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/user-attachments/assets/39ae0cfe-6227-4279-acf3-9df677235dd5" alt="Screenshot 2025-01-26 193050" width="200" /></td>
+    <td><img src="https://github.com/user-attachments/assets/0ccf2f52-43b6-4570-ba3f-037294b96c70" alt="Screenshot 2025-01-26 193211" width="200" /></td>
+    <td><img src="https://github.com/user-attachments/assets/55d1464b-54a9-4fc0-8a22-0c7dc5ce8645" alt="Screenshot 2025-01-26 193150" width="250" /></td>
+  </tr>
+</table>
+
+
+
+
+
